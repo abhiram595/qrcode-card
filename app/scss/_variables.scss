@@ -1,0 +1,17 @@
+// colors
+$white: hsl(0, 0%, 100%);
+$lighgray: hsl(212, 45%, 89%);
+$grayishblue: hsl(220, 15%, 55%);
+$darkblue: hsl(218, 44%, 22%);
+
+// font
+$family: 'Outfit', sans-serif;
+$normal: 400;
+$bold: 700;
+
+//breakpoints
+$xl: 87.5em; // 4k and hi-res desktop
+$lg: 60em; // 1080 and hi-res laptops
+$med: 40em; // hi-res tablets and low-res laptops
+$sm: 28em; // mobile and low-res tablets
+$xs: 20em; // mobile only

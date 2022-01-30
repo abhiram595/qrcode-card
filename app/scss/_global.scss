@@ -1,0 +1,78 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@mixin al-c($flow) {
+  display: $flow;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin responsive-up($device) {
+  @media (min-width: $device) {
+    @content;
+  }
+}
+
+@mixin responsive-down($device) {
+  @media (min-width: $xs) and (max-width: $device) {
+    @content;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  background-color: $lighgray;
+  @include al-c(flex);
+}
+
+main {
+  margin: 5% 0%;
+  @include responsive-down($sm) {
+    width: 75%;
+  }
+  @include responsive-up($med) {
+    width: 65%;
+  }
+  @include responsive-up($lg) {
+    width: 30%;
+  }
+  box-shadow: 0px 5px 55px 5px lightgrey;
+  background-color: $white;
+  border-radius: 20px;
+  img {
+    margin: 5% 5%;
+    border-radius: 20px;
+    height: 350px;
+    width: 90%;
+  }
+}
+
+.content {
+  margin: 1% 7%;
+  @include al-c(block);
+  text-align: center;
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-family: $family;
+    font-weight: $bold;
+    color: $darkblue;
+  }
+  p {
+    font-size: 1rem;
+    font-family: $family;
+    font-weight: $normal;
+    color: $grayishblue;
+    margin-bottom: 30px;
+  }
+}
